@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UserBriefIntroActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/x_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="个人简介"
+       >
+        <Button
+            android:id="@+id/save_introduction"
+            android:layout_marginLeft="166dp"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:background="@drawable/publish_button"
+            android:text="保存"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <EditText
+        android:id="@+id/brief_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="在这里可以简介一下自己~"
+        android:textSize="20sp"
+        android:gravity="start"/>
+</LinearLayout>

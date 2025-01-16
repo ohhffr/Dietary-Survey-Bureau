@@ -1,0 +1,55 @@
+<!-- dialog_date_picker.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="修改出生日期"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/year_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="年"/>
+
+        <Spinner
+            android:id="@+id/month_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="月"/>
+
+        <Spinner
+            android:id="@+id/day_spinner"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="日"/>
+    </LinearLayout>
+    <Button
+        android:layout_marginTop="16dp"
+        android:background="@drawable/press_effect"
+        android:layout_gravity="center"
+        android:id="@+id/confirm_button"
+        android:layout_width="66dp"
+        android:layout_height="33dp"
+        android:text="确认" />
+
+</LinearLayout>
