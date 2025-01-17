@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".SearchAllActivity">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:id="@+id/a"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/ic_search"/>
+
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/a"
+        android:layout_alignBottom="@+id/a"
+        android:id="@+id/search_box1"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:hint="搜索你想了解的东西"
+        android:background="#DCD8D8"
+        android:textStyle="bold"
+        android:textColor="#bfbfbf"/>
+    <ListView
+        android:layout_below="@+id/search_box1"
+        android:id="@+id/searchList1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" /> <!-- 默认隐藏 -->
+
+</RelativeLayout>

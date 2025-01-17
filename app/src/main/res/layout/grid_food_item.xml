@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+        <TextView
+            android:id="@+id/nut_element"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="营养元素"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/unit_nut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="每100ml"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/NRV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NRV%"
+            android:textSize="21sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="能量"/>
+
+
+    <TextView
+        android:id="@+id/food_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="209千焦"/>
+
+    <TextView
+        android:id="@+id/food_caloriesNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="3%"/>
+
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="蛋白质"/>
+
+
+    <TextView
+        android:id="@+id/food_protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="3.1克"/>
+
+    <TextView
+        android:id="@+id/food_proteinNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="5%"/>
+
+    <TextView
+        android:id="@+id/fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="脂肪"/>
+
+
+    <TextView
+        android:id="@+id/food_fat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="3.7克"/>
+
+    <TextView
+        android:id="@+id/food_fatNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="6%"/>
+
+    <TextView
+        android:id="@+id/carbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="碳水化合物"/>
+
+
+    <TextView
+        android:id="@+id/food_carbohydrates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="4.8克"/>
+
+    <TextView
+        android:id="@+id/food_carbohydratesNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="2%"/>
+
+    <TextView
+        android:id="@+id/sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="钠"/>
+
+
+    <TextView
+        android:id="@+id/food_sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="70毫克"/>
+
+    <TextView
+        android:id="@+id/food_sodiumNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="4%"/>
+
+
+    <TextView
+        android:id="@+id/calcium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="钙"/>
+
+
+    <TextView
+        android:id="@+id/food_calcium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="100毫克"/>
+
+    <TextView
+        android:id="@+id/food_calciumNRV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="13%"/>
+
+
+</LinearLayout>

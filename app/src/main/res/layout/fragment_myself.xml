@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
+    android:orientation="vertical"
+    tools:context=".MyselfFragment">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:background="?attr/colorPrimary"></androidx.appcompat.widget.Toolbar>-->
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="180dp"-->
+<!--        android:layout_marginLeft="10dp"-->
+<!--        android:layout_marginTop="70dp"-->
+<!--        android:layout_marginRight="10dp"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:cardElevation="0dp"></androidx.cardview.widget.CardView>-->
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/app_img"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="80dp"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="35dp"-->
+<!--        android:src="@drawable/app_img"-->
+<!--        tools:ignore="MissingClass" />-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        tools:ignore="ScrollViewCount">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/my_name"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#D6F6F3"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/btn_myself"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/pic_head"
+                    android:backgroundTint="#6AD8CD" />
+
+                <TextView
+                    android:id="@+id/login_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="37dp"
+                    android:layout_toRightOf="@+id/btn_myself"
+                    android:gravity="center"
+                    android:text="未登录"
+                    android:textSize="35sp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="120dp"
+                    android:layout_marginLeft="119dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="-76dp"
+                    android:layout_marginBottom="126dp"
+                    android:layout_toRightOf="@+id/btn_myself"
+                    android:src="@drawable/bell" />
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_myself"
+                    android:gravity="center"
+                    android:text="没名字"
+                    android:textSize="23sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    tools:ignore="UnknownId" />
+
+                <TextView
+                    android:clickable="true"
+                    android:onClick="userInfo"
+                    android:id="@+id/my_info"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我的主页  >"
+                    android:layout_alignTop="@id/user_name"
+                    android:layout_toRightOf="@id/user_name"
+                    android:layout_marginLeft="145dp"/>
+
+                <TextView
+                    android:layout_width="145dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/user_name"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="2dp"
+                    android:text="0关注 0粉丝 0获赞"
+                    android:textColor="@color/teal_700"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@+id/my_name"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="360dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginRight="10dp"
+                    android:backgroundTint="@color/green"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:text="V食卡会员"
+                            android:textColor="#4CAF50"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="230dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="私人健康管家制 | 高级饮食定制服务"
+                            android:textColor="@color/teal_200"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="40dp"
+                            android:text="19.99/月"
+                            android:textColor="#D31A59"
+                            android:textSize="22sp" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="40dp"
+                            android:text="199.99/年"
+                            android:textColor="#D31A59"
+                            android:textSize="22sp" />
+
+                        <Button
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="40dp"
+                            android:backgroundTint="#23AE45"
+                            android:text="立即办理"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/all_btn"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@+id/name"
+                android:layout_marginTop="20dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_coupon"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/coupon"
+                            android:drawableTop="@drawable/shopping" />
+
+                        <TextView
+                            android:id="@+id/ed_coupon"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_coupon"
+                            android:gravity="center"
+                            android:text="优惠券"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_star"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/star" />
+
+                        <TextView
+                            android:id="@+id/ed_star"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:gravity="center"
+                            android:text="我的收藏"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_shopping"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/shopping_cart" />
+
+                        <TextView
+                            android:id="@+id/ed_shopping"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_shopping"
+                            android:gravity="center"
+                            android:text="购物车"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_order"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/order" />
+
+                        <TextView
+                            android:id="@+id/ed_order"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_below="@id/btn_order"
+                            android:gravity="center"
+                            android:text="我的订单"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/all_btn"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15dp"
+                        android:background="@null"
+                        android:text="更多服务"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1A000000" />
+
+                <RelativeLayout
+                    android:id="@+id/communicate_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@null"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/communicate" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="联系客服"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1A000000" />
+
+                <RelativeLayout
+                    android:id="@+id/set_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/set" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="设置"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1A000000" />
+
+                <RelativeLayout
+                    android:id="@+id/privacy_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/privacy" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="隐私管理"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1A000000" />
+
+                <RelativeLayout
+                    android:id="@+id/usehelp_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/help" />
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="帮助与反馈"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/update_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/update" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="检查更新"
+                        android:textSize="17sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/about_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:src="@drawable/about" />
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="70dp"
+                        android:text="关于"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/right_1" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#1A000000" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

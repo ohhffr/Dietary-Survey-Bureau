@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按钮按下时的颜色 -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#00FF00"/> <!-- 按下时的颜色，这里为红色 -->
+        </shape>
+    </item>
+    <!-- 按钮正常状态下的颜色 -->
+    <item android:state_pressed="false">
+        <shape>
+            <solid android:color="#ffffff"/> <!-- 正常状态下的颜色，这里为绿色 -->
+        </shape>
+    </item>
+</selector>
